@@ -1039,6 +1039,8 @@
                 "max_power": {"$ref": "./definitions.jsonschema#/unsigned_int"},
                 "no_startup_check": {"type": "boolean"},
                 "polling_interval": {"$ref": "./definitions.jsonschema#/unsigned_int_8"},
+                "dynamic": {"type": "boolean"},
+                "vbus_pin": {"$ref": "./definitions.jsonschema#/mcu_pin"},
                 "shared_endpoint": {
                     "type": "object",
                     "additionalProperties": false,

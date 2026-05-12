@@ -20,6 +20,15 @@
 
 void usb_disconnect(void);
 
+void usb_reconnect(void);
+
 bool usb_connected_state(void);
 
 bool usb_vbus_state(void);
+
+/* Periodic VBUS poll; transitions the USB peripheral on edges when usb.dynamic is set. */
+void usb_dynamic_task(void);
+
+/* Fires on every VBUS edge while usb.dynamic is enabled. */
+void usb_vbus_changed_kb(bool connected);
+void usb_vbus_changed_user(bool connected);

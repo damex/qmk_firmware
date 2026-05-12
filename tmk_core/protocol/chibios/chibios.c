@@ -45,6 +45,7 @@
 #endif
 #include "suspend.h"
 #include "wait.h"
+#include "usb_util.h"
 
 #define USB_GETSTATUS_REMOTE_WAKEUP_ENABLED (2U)
 
@@ -207,4 +208,5 @@ void protocol_post_task(void) {
     virtser_task();
 #endif
     usb_idle_task();
+    usb_dynamic_task();
 }

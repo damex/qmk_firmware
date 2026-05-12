@@ -22,6 +22,10 @@ void usb_disconnect(void) {
     usbStop(&USB_DRIVER);
 }
 
+void usb_reconnect(void) {
+    init_usb_driver(&USB_DRIVER);
+}
+
 bool usb_connected_state(void) {
     return usbGetDriverStateI(&USB_DRIVER) == USB_ACTIVE;
 }
